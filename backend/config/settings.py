@@ -147,3 +147,15 @@ LOGGING = {
 
 # Ensure logs directory exists
 (BASE_DIR / "logs").mkdir(exist_ok=True)
+
+
+# Production overrides
+if not DEBUG:
+    ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
+    
+    # Allow Railway URL
+    CSRF_TRUSTED_ORIGINS = os.getenv("CSRF_TRUSTED_ORIGINS", "").split(",")
+    
+    # Static files
+    STATIC_ROOT = BASE_DIR / "staticfiles"
+    STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"

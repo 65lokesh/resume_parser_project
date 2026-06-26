@@ -15,3 +15,4 @@ Pillow==10.4.0            # Image support (optional, for logo handling)
 # Uncomment for production:
 # gunicorn==22.0.0
 # whitenoise==6.7.0
+gunicorn==21.2.0
