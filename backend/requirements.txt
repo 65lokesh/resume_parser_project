@@ -1,0 +1,18 @@
+# ─── Django Core ──────────────────────────────────────────────────────────────
+Django==4.2.13
+djangorestframework==3.15.2
+django-cors-headers==4.3.1
+
+# ─── File Parsing ─────────────────────────────────────────────────────────────
+pdfplumber==0.11.0        # PDF text extraction
+python-docx==1.1.2        # DOCX text extraction
+
+# ─── Utilities ────────────────────────────────────────────────────────────────
+python-dotenv==1.0.1      # .env file support
+Pillow==10.4.0            # Image support (optional, for logo handling)
+
+# ─── Development ──────────────────────────────────────────────────────────────
+# Uncomment for production:
+# gunicorn==22.0.0
+# whitenoise==6.7.0
+gunicorn==21.2.0
