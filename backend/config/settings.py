@@ -150,12 +150,12 @@ LOGGING = {
 
 
 # Production overrides
-if not DEBUG:
-    ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
+# if not DEBUG:
+#     ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
     
-    # Allow Railway URL
-    CSRF_TRUSTED_ORIGINS = os.getenv("CSRF_TRUSTED_ORIGINS", "").split(",")
+#     # Allow Railway URL
+#     CSRF_TRUSTED_ORIGINS = os.getenv("CSRF_TRUSTED_ORIGINS", "").split(",")
     
-    # Static files
-    STATIC_ROOT = BASE_DIR / "staticfiles"
-    STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
+#     # Static files
+#     STATIC_ROOT = BASE_DIR / "staticfiles"
+#     STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
